@@ -1,0 +1,667 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		699B4A53FE3A40AA61ACB08B /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549CD26F06A5727745E77E3A /* OnboardingView.swift */; };
+		714137753B4784068BC77915 /* WITPIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF942A14938800CBF5B33B8 /* WITPIntents.swift */; };
+		848FE95A62C994F4E9B1F388 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C88FA7F6127570A4682EC333 /* PrivacyInfo.xcprivacy */; };
+		898031CF2FA667AB000DCE29 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031C22FA667AB000DCE29 /* MapView.swift */; };
+		898031D02FA667AB000DCE29 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031CC2FA667AB000DCE29 /* SubscriptionManager.swift */; };
+		898031D12FA667AB000DCE29 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031C62FA667AB000DCE29 /* ProfileView.swift */; };
+		898031D22FA667AB000DCE29 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031BF2FA667AB000DCE29 /* HapticManager.swift */; };
+		898031D32FA667AB000DCE29 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031BE2FA667AB000DCE29 /* DesignSystem.swift */; };
+		898031D42FA667AB000DCE29 /* WITPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031CD2FA667AB000DCE29 /* WITPApp.swift */; };
+		898031D52FA667AB000DCE29 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031C52FA667AB000DCE29 /* PaywallView.swift */; };
+		898031D62FA667AB000DCE29 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031C92FA667AB000DCE29 /* SessionStore.swift */; };
+		898031D72FA667AB000DCE29 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031C32FA667AB000DCE29 /* Models.swift */; };
+		898031D92FA667AB000DCE29 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031C12FA667AB000DCE29 /* LocationManager.swift */; };
+		898031DA2FA667AB000DCE29 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031C82FA667AB000DCE29 /* RootView.swift */; };
+		898031DB2FA667AB000DCE29 /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031CA2FA667AB000DCE29 /* SessionsView.swift */; };
+		898031DC2FA667AB000DCE29 /* ParkingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031C42FA667AB000DCE29 /* ParkingEngine.swift */; };
+		898031DD2FA667AB000DCE29 /* StreetFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031CB2FA667AB000DCE29 /* StreetFinder.swift */; };
+		898031DF2FA667AB000DCE29 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 898031C72FA667AB000DCE29 /* README.md */; };
+		898031E12FA667BF000DCE29 /* WITP.Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 898031E02FA667BF000DCE29 /* WITP.Image.xcassets */; };
+		898031E72FA66C09000DCE29 /* Products.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 898031E62FA66C09000DCE29 /* Products.storekit */; };
+		898031E92FA7B158000DCE29 /* Availabilitypredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031E82FA7B157000DCE29 /* Availabilitypredictor.swift */; };
+		898031EB2FA7B6B0000DCE29 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898031EA2FA7B6B0000DCE29 /* SplashView.swift */; };
+		89BFA7DD3002FFC900C4E8B3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFA7DC3002FFC800C4E8B3 /* WidgetKit.framework */; };
+		89BFA7DF3002FFC900C4E8B3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89BFA7DE3002FFC900C4E8B3 /* SwiftUI.framework */; };
+		89BFA7EE3002FFCC00C4E8B3 /* WITPWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 89BFA7DA3002FFC800C4E8B3 /* WITPWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8D48C680FDBDB07FF02E49AB /* NeuralReasoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0987A915BD457487476486 /* NeuralReasoner.swift */; };
+		972D08FFCE9166238C4969A9 /* witp-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A08422DA72CB22D80FF40BB /* witp-mark.png */; };
+		9B94E025C9914E7C9083D137 /* ClaudeReasoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C941F6E75E48198D2724C /* ClaudeReasoner.swift */; };
+		B024B369FF16A000B202881E /* ParkingActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352666B6D24AF9ED0ED374A /* ParkingActivityAttributes.swift */; };
+		D6D483F6159B1B6B86021603 /* ParkingActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352666B6D24AF9ED0ED374A /* ParkingActivityAttributes.swift */; };
+		DD9149B393B69DE235212F24 /* LanguageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D1B5C82BEBEEA6B6D4415B /* LanguageStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		89BFA7EC3002FFCC00C4E8B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 891185BA2F8C2D6100BB5EFA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89BFA7D93002FFC800C4E8B3;
+			remoteInfo = WITPWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		89BFA7EF3002FFCC00C4E8B3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				89BFA7EE3002FFCC00C4E8B3 /* WITPWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0352666B6D24AF9ED0ED374A /* ParkingActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingActivityAttributes.swift; sourceTree = "<group>"; };
+		549CD26F06A5727745E77E3A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		600C941F6E75E48198D2724C /* ClaudeReasoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeReasoner.swift; sourceTree = "<group>"; };
+		6A08422DA72CB22D80FF40BB /* witp-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "witp-mark.png"; sourceTree = "<group>"; };
+		6F0987A915BD457487476486 /* NeuralReasoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuralReasoner.swift; sourceTree = "<group>"; };
+		7EF942A14938800CBF5B33B8 /* WITPIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WITPIntents.swift; sourceTree = "<group>"; };
+		87D1B5C82BEBEEA6B6D4415B /* LanguageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageStore.swift; sourceTree = "<group>"; };
+		891185C22F8C2D6100BB5EFA /* WITP Claude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WITP Claude.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		898031BE2FA667AB000DCE29 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		898031BF2FA667AB000DCE29 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		898031C02FA667AB000DCE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		898031C12FA667AB000DCE29 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		898031C22FA667AB000DCE29 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		898031C32FA667AB000DCE29 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		898031C42FA667AB000DCE29 /* ParkingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingEngine.swift; sourceTree = "<group>"; };
+		898031C52FA667AB000DCE29 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		898031C62FA667AB000DCE29 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		898031C72FA667AB000DCE29 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		898031C82FA667AB000DCE29 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		898031C92FA667AB000DCE29 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		898031CA2FA667AB000DCE29 /* SessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
+		898031CB2FA667AB000DCE29 /* StreetFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetFinder.swift; sourceTree = "<group>"; };
+		898031CC2FA667AB000DCE29 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		898031CD2FA667AB000DCE29 /* WITPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WITPApp.swift; sourceTree = "<group>"; };
+		898031E02FA667BF000DCE29 /* WITP.Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WITP.Image.xcassets; sourceTree = "<group>"; };
+		898031E62FA66C09000DCE29 /* Products.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products.storekit; sourceTree = "<group>"; };
+		898031E82FA7B157000DCE29 /* Availabilitypredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Availabilitypredictor.swift; sourceTree = "<group>"; };
+		898031EA2FA7B6B0000DCE29 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		89BFA7DA3002FFC800C4E8B3 /* WITPWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WITPWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		89BFA7DC3002FFC800C4E8B3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		89BFA7DE3002FFC900C4E8B3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C88FA7F6127570A4682EC333 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		89BFA7F23002FFCC00C4E8B3 /* Exceptions for "WITPWidgets" folder in "WITPWidgetsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 89BFA7D93002FFC800C4E8B3 /* WITPWidgetsExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		89BFA7E03002FFC900C4E8B3 /* WITPWidgets */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				89BFA7F23002FFCC00C4E8B3 /* Exceptions for "WITPWidgets" folder in "WITPWidgetsExtension" target */,
+			);
+			path = WITPWidgets;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		891185BF2F8C2D6100BB5EFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89BFA7D73002FFC800C4E8B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89BFA7DF3002FFC900C4E8B3 /* SwiftUI.framework in Frameworks */,
+				89BFA7DD3002FFC900C4E8B3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		891185B92F8C2D6100BB5EFA = {
+			isa = PBXGroup;
+			children = (
+				898031CE2FA667AB000DCE29 /* WITP 4 */,
+				89BFA7E03002FFC900C4E8B3 /* WITPWidgets */,
+				89BFA7DB3002FFC800C4E8B3 /* Frameworks */,
+				891185C32F8C2D6100BB5EFA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		891185C32F8C2D6100BB5EFA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				891185C22F8C2D6100BB5EFA /* WITP Claude.app */,
+				89BFA7DA3002FFC800C4E8B3 /* WITPWidgetsExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		898031CE2FA667AB000DCE29 /* WITP 4 */ = {
+			isa = PBXGroup;
+			children = (
+				87D1B5C82BEBEEA6B6D4415B /* LanguageStore.swift */,
+				0352666B6D24AF9ED0ED374A /* ParkingActivityAttributes.swift */,
+				7EF942A14938800CBF5B33B8 /* WITPIntents.swift */,
+				6F0987A915BD457487476486 /* NeuralReasoner.swift */,
+				6A08422DA72CB22D80FF40BB /* witp-mark.png */,
+				600C941F6E75E48198D2724C /* ClaudeReasoner.swift */,
+				549CD26F06A5727745E77E3A /* OnboardingView.swift */,
+				C88FA7F6127570A4682EC333 /* PrivacyInfo.xcprivacy */,
+				898031BE2FA667AB000DCE29 /* DesignSystem.swift */,
+				898031E62FA66C09000DCE29 /* Products.storekit */,
+				898031BF2FA667AB000DCE29 /* HapticManager.swift */,
+				898031C02FA667AB000DCE29 /* Info.plist */,
+				898031E02FA667BF000DCE29 /* WITP.Image.xcassets */,
+				898031C12FA667AB000DCE29 /* LocationManager.swift */,
+				898031C22FA667AB000DCE29 /* MapView.swift */,
+				898031EA2FA7B6B0000DCE29 /* SplashView.swift */,
+				898031E82FA7B157000DCE29 /* Availabilitypredictor.swift */,
+				898031C32FA667AB000DCE29 /* Models.swift */,
+				898031C42FA667AB000DCE29 /* ParkingEngine.swift */,
+				898031C52FA667AB000DCE29 /* PaywallView.swift */,
+				898031C62FA667AB000DCE29 /* ProfileView.swift */,
+				898031C72FA667AB000DCE29 /* README.md */,
+				898031C82FA667AB000DCE29 /* RootView.swift */,
+				898031C92FA667AB000DCE29 /* SessionStore.swift */,
+				898031CA2FA667AB000DCE29 /* SessionsView.swift */,
+				898031CB2FA667AB000DCE29 /* StreetFinder.swift */,
+				898031CC2FA667AB000DCE29 /* SubscriptionManager.swift */,
+				898031CD2FA667AB000DCE29 /* WITPApp.swift */,
+			);
+			path = "WITP 4";
+			sourceTree = "<group>";
+		};
+		89BFA7DB3002FFC800C4E8B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89BFA7DC3002FFC800C4E8B3 /* WidgetKit.framework */,
+				89BFA7DE3002FFC900C4E8B3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		891185C12F8C2D6100BB5EFA /* WITP Claude */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 891185CD2F8C2D6200BB5EFA /* Build configuration list for PBXNativeTarget "WITP Claude" */;
+			buildPhases = (
+				891185BE2F8C2D6100BB5EFA /* Sources */,
+				891185BF2F8C2D6100BB5EFA /* Frameworks */,
+				891185C02F8C2D6100BB5EFA /* Resources */,
+				89BFA7EF3002FFCC00C4E8B3 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89BFA7ED3002FFCC00C4E8B3 /* PBXTargetDependency */,
+			);
+			name = "WITP Claude";
+			packageProductDependencies = (
+			);
+			productName = "WITP Claude";
+			productReference = 891185C22F8C2D6100BB5EFA /* WITP Claude.app */;
+			productType = "com.apple.product-type.application";
+		};
+		89BFA7D93002FFC800C4E8B3 /* WITPWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89BFA7F33002FFCC00C4E8B3 /* Build configuration list for PBXNativeTarget "WITPWidgetsExtension" */;
+			buildPhases = (
+				89BFA7D63002FFC800C4E8B3 /* Sources */,
+				89BFA7D73002FFC800C4E8B3 /* Frameworks */,
+				89BFA7D83002FFC800C4E8B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				89BFA7E03002FFC900C4E8B3 /* WITPWidgets */,
+			);
+			name = WITPWidgetsExtension;
+			packageProductDependencies = (
+			);
+			productName = WITPWidgetsExtension;
+			productReference = 89BFA7DA3002FFC800C4E8B3 /* WITPWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		891185BA2F8C2D6100BB5EFA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					891185C12F8C2D6100BB5EFA = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					89BFA7D93002FFC800C4E8B3 = {
+						CreatedOnToolsVersion = 27.0;
+						LastSwiftMigration = 2700;
+					};
+				};
+			};
+			buildConfigurationList = 891185BD2F8C2D6100BB5EFA /* Build configuration list for PBXProject "WITP Definitivo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 891185B92F8C2D6100BB5EFA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 891185C32F8C2D6100BB5EFA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				891185C12F8C2D6100BB5EFA /* WITP Claude */,
+				89BFA7D93002FFC800C4E8B3 /* WITPWidgetsExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		891185C02F8C2D6100BB5EFA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				972D08FFCE9166238C4969A9 /* witp-mark.png in Resources */,
+				848FE95A62C994F4E9B1F388 /* PrivacyInfo.xcprivacy in Resources */,
+				898031DF2FA667AB000DCE29 /* README.md in Resources */,
+				898031E72FA66C09000DCE29 /* Products.storekit in Resources */,
+				898031E12FA667BF000DCE29 /* WITP.Image.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89BFA7D83002FFC800C4E8B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		891185BE2F8C2D6100BB5EFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6D483F6159B1B6B86021603 /* ParkingActivityAttributes.swift in Sources */,
+				714137753B4784068BC77915 /* WITPIntents.swift in Sources */,
+				8D48C680FDBDB07FF02E49AB /* NeuralReasoner.swift in Sources */,
+				9B94E025C9914E7C9083D137 /* ClaudeReasoner.swift in Sources */,
+				699B4A53FE3A40AA61ACB08B /* OnboardingView.swift in Sources */,
+				898031CF2FA667AB000DCE29 /* MapView.swift in Sources */,
+				898031D02FA667AB000DCE29 /* SubscriptionManager.swift in Sources */,
+				898031EB2FA7B6B0000DCE29 /* SplashView.swift in Sources */,
+				898031D12FA667AB000DCE29 /* ProfileView.swift in Sources */,
+				898031D22FA667AB000DCE29 /* HapticManager.swift in Sources */,
+				898031D32FA667AB000DCE29 /* DesignSystem.swift in Sources */,
+				898031D42FA667AB000DCE29 /* WITPApp.swift in Sources */,
+				DD9149B393B69DE235212F24 /* LanguageStore.swift in Sources */,
+				898031D52FA667AB000DCE29 /* PaywallView.swift in Sources */,
+				898031D62FA667AB000DCE29 /* SessionStore.swift in Sources */,
+				898031D72FA667AB000DCE29 /* Models.swift in Sources */,
+				898031D92FA667AB000DCE29 /* LocationManager.swift in Sources */,
+				898031DA2FA667AB000DCE29 /* RootView.swift in Sources */,
+				898031DB2FA667AB000DCE29 /* SessionsView.swift in Sources */,
+				898031E92FA7B158000DCE29 /* Availabilitypredictor.swift in Sources */,
+				898031DC2FA667AB000DCE29 /* ParkingEngine.swift in Sources */,
+				898031DD2FA667AB000DCE29 /* StreetFinder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89BFA7D63002FFC800C4E8B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B024B369FF16A000B202881E /* ParkingActivityAttributes.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89BFA7ED3002FFCC00C4E8B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89BFA7D93002FFC800C4E8B3 /* WITPWidgetsExtension */;
+			targetProxy = 89BFA7EC3002FFCC00C4E8B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		891185CB2F8C2D6200BB5EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S6C4FQLMT5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		891185CC2F8C2D6200BB5EFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S6C4FQLMT5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		891185CE2F8C2D6200BB5EFA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S6C4FQLMT5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = WITP;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WITP usa la tua posizione per trovare i parcheggi liberi intorno a te.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielescruzzi.witp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		891185CF2F8C2D6200BB5EFA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S6C4FQLMT5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = WITP;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WITP usa la tua posizione per trovare i parcheggi liberi intorno a te.";
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 26;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielescruzzi.witp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		89BFA7F03002FFCC00C4E8B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S6C4FQLMT5;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WITPWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WITPWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielescruzzi.witp.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		89BFA7F13002FFCC00C4E8B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S6C4FQLMT5;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = WITPWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WITPWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielescruzzi.witp.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		891185BD2F8C2D6100BB5EFA /* Build configuration list for PBXProject "WITP Definitivo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				891185CB2F8C2D6200BB5EFA /* Debug */,
+				891185CC2F8C2D6200BB5EFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		891185CD2F8C2D6200BB5EFA /* Build configuration list for PBXNativeTarget "WITP Claude" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				891185CE2F8C2D6200BB5EFA /* Debug */,
+				891185CF2F8C2D6200BB5EFA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89BFA7F33002FFCC00C4E8B3 /* Build configuration list for PBXNativeTarget "WITPWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89BFA7F03002FFCC00C4E8B3 /* Debug */,
+				89BFA7F13002FFCC00C4E8B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 891185BA2F8C2D6100BB5EFA /* Project object */;
+}

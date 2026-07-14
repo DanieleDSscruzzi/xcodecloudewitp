@@ -1,0 +1,11 @@
+name = "witp-api"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+routes = [
+  { pattern = "api.whereistheparking.com/*", zone_name = "whereistheparking.com" }
+]
+
+[[kv_namespaces]]
+binding = "PROMO_KV"
+id = "INCOLLA_QUI_ID_KV"   # wrangler kv namespace create witp_promo

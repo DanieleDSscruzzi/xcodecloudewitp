@@ -1,0 +1,196 @@
+{
+  "appPolicies": {
+    "eula": "",
+    "policies": [
+      {
+        "locale": "en_US",
+        "policyText": "",
+        "policyURL": ""
+      }
+    ]
+  },
+  "identifier": "F8A2C9E3-1B4D-4E7F-9A8B-2C5D6E7F8A9B",
+  "nonRenewingSubscriptions": [],
+  "products": [],
+  "settings": {
+    "_askToBuyEnabled": false,
+    "_billingGracePeriodEnabled": false,
+    "_billingIssuesEnabled": false,
+    "_disableDialogs": false,
+    "_failTransactionsEnabled": false,
+    "_locale": "it",
+    "_renewalBillingIssuesEnabled": false,
+    "_storefront": "ITA",
+    "_storeKitErrors": [
+      {
+        "enabled": false,
+        "name": "Load Products"
+      },
+      {
+        "enabled": false,
+        "name": "Purchase"
+      },
+      {
+        "enabled": false,
+        "name": "Verification"
+      },
+      {
+        "enabled": false,
+        "name": "App Store Sync"
+      },
+      {
+        "enabled": false,
+        "name": "Subscription Status"
+      },
+      {
+        "enabled": false,
+        "name": "App Transaction"
+      },
+      {
+        "enabled": false,
+        "name": "Manage Subscriptions Sheet"
+      },
+      {
+        "enabled": false,
+        "name": "Refund Request Sheet"
+      },
+      {
+        "enabled": false,
+        "name": "Offer Code Redeem Sheet"
+      }
+    ],
+    "_timeRate": 0
+  },
+  "subscriptionGroups": [
+    {
+      "id": "21551234",
+      "localizations": [
+        {
+          "description": "Abbonamenti WITP — accesso a WDSL+",
+          "displayName": "WITP Premium",
+          "locale": "it"
+        },
+        {
+          "description": "WITP subscriptions — WDSL+ access",
+          "displayName": "WITP Premium",
+          "locale": "en_US"
+        }
+      ],
+      "name": "WITP Subscriptions",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "6.99",
+          "familyShareable": false,
+          "groupNumber": 4,
+          "internalID": "6741550001",
+          "introductoryOffers": [],
+          "localizations": [
+            {
+              "description": "Risposta entro 10 secondi, raggio 1 km, 15 aree, ragionamento Claude Haiku.",
+              "displayName": "WITP Premium",
+              "locale": "it"
+            },
+            {
+              "description": "1000 m radius, up to 15 streets, full OpenStreetMap, Claude AI reasoning (Haiku), parking expiry notifications.",
+              "displayName": "WITP Premium",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "cobianchi.WITP.premium.Claude2",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "WITP Premium Monthly",
+          "subscriptionGroupID": "21551234",
+          "type": "RecurringSubscription",
+          "winbackOffers": []
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "12.99",
+          "familyShareable": false,
+          "groupNumber": 3,
+          "internalID": "6741550002",
+          "introductoryOffers": [],
+          "localizations": [
+            {
+              "description": "Risposta entro 5 secondi, raggio 1,5 km, 30 aree, Claude Sonnet, priorità massima.",
+              "displayName": "WITP Turbo",
+              "locale": "it"
+            },
+            {
+              "description": "1500 m radius, up to 30 streets, Claude AI reasoning (Sonnet), top processing priority.",
+              "displayName": "WITP Turbo",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "cobianchi.WITP.turbo.Claude2",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "WITP Turbo Monthly",
+          "subscriptionGroupID": "21551234",
+          "type": "RecurringSubscription",
+          "winbackOffers": []
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "19.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "6741550003",
+          "introductoryOffers": [],
+          "localizations": [
+            {
+              "description": "Risposta entro 3 secondi, prefetch continuo, raggio 2 km, 40 aree, Claude Opus.",
+              "displayName": "Ultra",
+              "locale": "it"
+            },
+            {
+              "description": "1500 m radius, up to 30 streets, Claude AI reasoning (Sonnet), top processing priority.",
+              "displayName": "WITP Turbo",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "cobianchi.WITP.ultra.Claude2",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "WITP Ultra",
+          "subscriptionGroupID": "21551234",
+          "type": "RecurringSubscription",
+          "winbackOffers": []
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "49.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "6741550004",
+          "introductoryOffers": [],
+          "localizations": [
+            {
+              "description": "Risposta entro 1 secondo, ragionamento sul chip, Claude Fable 5, raggio 2,5 km, 50 aree.",
+              "displayName": "Ultra+",
+              "locale": "it"
+            },
+            {
+              "description": "1500 m radius, up to 30 streets, Claude AI reasoning (Sonnet), top processing priority.",
+              "displayName": "WITP Turbo",
+              "locale": "en_US"
+            }
+          ],
+          "productID": "cobianchi.WITP.ultraplus.Claude2",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "WITP Ultra+",
+          "subscriptionGroupID": "21551234",
+          "type": "RecurringSubscription",
+          "winbackOffers": []
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 5,
+    "minor": 0
+  }
+}
