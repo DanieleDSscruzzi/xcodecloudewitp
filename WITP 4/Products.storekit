@@ -1,0 +1,271 @@
+{
+  "identifier": "4DB07C47-9A81-456D-AFFA-92F453C43690",
+  "nonRenewingSubscriptions": [],
+  "products": [],
+  "settings": {},
+  "subscriptionGroups": [
+    {
+      "id": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+      "localizations": [],
+      "name": "WITP Subscriptions",
+      "subscriptions": [
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "6.99",
+          "familyShareable": false,
+          "groupNumber": 4,
+          "internalID": "848785FD-E4EE-4926-8725-227A944DECF1",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Premium",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.premium.Claude2",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "WITP Premium (1 mese)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "1.99",
+          "familyShareable": false,
+          "groupNumber": 4,
+          "internalID": "DE9DEEC9-5AAD-40EF-8C84-AF32E6D83B40",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Premium",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.premiumweek.Claude2",
+          "recurringSubscriptionPeriod": "P1W",
+          "referenceName": "WITP Premium (1 settimana)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "69.99",
+          "familyShareable": false,
+          "groupNumber": 4,
+          "internalID": "9ED31689-942F-493E-80DB-9B4DBF4A3604",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Premium",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.premiumannual.Claude2",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "WITP Premium (1 anno)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "12.99",
+          "familyShareable": false,
+          "groupNumber": 3,
+          "internalID": "624B4E4D-A260-4242-B520-074A25C89534",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Turbo",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.turbo.Claude2",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "WITP Turbo (1 mese)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "3.99",
+          "familyShareable": false,
+          "groupNumber": 3,
+          "internalID": "682C6538-BB4A-4607-BAC6-B202B3385469",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Turbo",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.turboweek.Claude2",
+          "recurringSubscriptionPeriod": "P1W",
+          "referenceName": "WITP Turbo (1 settimana)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "129.99",
+          "familyShareable": false,
+          "groupNumber": 3,
+          "internalID": "702E7A5E-E636-4384-915E-61C2B6E90475",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Turbo",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.turboannual.Claude2",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "WITP Turbo (1 anno)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "19.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "37CE2E20-0BA0-42CE-8210-E7BFABB2DFCD",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Ultra",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.ultra.Claude2",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "WITP Ultra (1 mese)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "5.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "22C96C99-A31F-4E0F-8BC5-6923C795E3B4",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Ultra",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.ultraweek.Claude2",
+          "recurringSubscriptionPeriod": "P1W",
+          "referenceName": "WITP Ultra (1 settimana)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "199.99",
+          "familyShareable": false,
+          "groupNumber": 2,
+          "internalID": "99CE459C-491F-4D33-BB02-3C91271D9B70",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Ultra",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.ultraannual2.Claude2",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "WITP Ultra (1 anno)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "49.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "39C0627B-01C7-4EF0-B2A8-D6D208744C9A",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Ultra+",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.ultraplus.Claude2",
+          "recurringSubscriptionPeriod": "P1M",
+          "referenceName": "WITP Ultra+ (1 mese)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "13.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "9E63E2BB-3EF2-4AEC-9F83-740128655ECB",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Ultra+",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.ultraplusweek.Claude2",
+          "recurringSubscriptionPeriod": "P1W",
+          "referenceName": "WITP Ultra+ (1 settimana)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        },
+        {
+          "adHocOffers": [],
+          "codeOffers": [],
+          "displayPrice": "499.99",
+          "familyShareable": false,
+          "groupNumber": 1,
+          "internalID": "1FCF9152-BB63-4BBA-BCBF-618DC0E1C819",
+          "introductoryOffer": null,
+          "localizations": [
+            {
+              "description": "Abbonamento WITP",
+              "displayName": "WITP Ultra+",
+              "locale": "it_IT"
+            }
+          ],
+          "productID": "cobianchi.WITP.ultraplusannual.Claude2",
+          "recurringSubscriptionPeriod": "P1Y",
+          "referenceName": "WITP Ultra+ (1 anno)",
+          "subscriptionGroupID": "F9F1CD36-0F71-4886-89F6-FB342C43C982",
+          "type": "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version": {
+    "major": 3,
+    "minor": 0
+  }
+}

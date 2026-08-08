@@ -1,0 +1,9 @@
+{
+  "id" : "8fc801ce-5773-4c9c-963d-0c9b61808ea5",
+  "targets" : [
+    {
+      "id" : "4c120a91-f323-4ced-beb5-1ad0a310b095",
+      "name" : "WITP Claude"
+    }
+  ]
+}
