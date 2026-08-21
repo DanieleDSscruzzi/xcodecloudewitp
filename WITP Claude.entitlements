@@ -12,5 +12,16 @@
 	<array>
 		<string>CloudKit</string>
 	</array>
+	<!-- CarPlay per app di parcheggio. Apple deve APPROVARE questa
+	     capability prima che funzioni: si richiede su
+	     developer.apple.com/contact/carplay (vedi CARPLAY.md).
+	     Finché non è approvata, questa riga fa fallire la firma:
+	     tienila commentata se devi compilare prima dell'ok. -->
+	<!-- CarPlay per app di parcheggio. Se la firma fallisce con
+	     "requires approval from Apple", significa che la capability non è
+	     ancora abbinata a questo bundle ID: premi "Request Access…" in
+	     Signing & Capabilities e ricommenta queste due righe nel frattempo. -->
+	<key>com.apple.developer.carplay-parking</key>
+	<true/>
 </dict>
 </plist>

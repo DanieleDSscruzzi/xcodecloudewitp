@@ -35,6 +35,9 @@ struct WITPMapView: View {
     @State private var showPaywall = false
     @State private var showAlternatives = false
     @State private var showSessions = false
+    @State private var showAddressSearch = false
+    /// Zona cercata a mano: mostrata come etichetta finché non si torna al GPS.
+    @State private var searchedPlace: String?
     @State private var autoSearchWhenLocated = false
 
     // Prefetch (piani Ultra): i dati sono già caldi prima del tocco.
@@ -68,6 +71,17 @@ struct WITPMapView: View {
         .animation(.easeInOut(duration: 0.45), value: engine.isSearching)
         .sheet(isPresented: $showProfile)  { ProfileView() }
         .sheet(isPresented: $showPaywall)  { PaywallView() }
+        .sheet(isPresented: $showAddressSearch) {
+
+            AddressSearchView(nearby: location.currentLocation) { coord, name in
+
+                searchedPlace = name
+
+                search(at: coord)
+
+            }
+
+        }
         .sheet(isPresented: $showSessions) { NavigationStack { SessionsView() } }
         .sheet(isPresented: $showAlternatives) { alternativesSheet }
         .task(id: engine.isSearching) {
@@ -174,6 +188,7 @@ struct WITPMapView: View {
             // shimmer Apple Intelligence e si posano sul colore di zona.
             StallCanvas(proxy: proxy,
                         spots: engine.spots,
+                        ztl: engine.ztlZones,
                         revealAt: revealAt,
                         settled: engine.phase == .done,
                         cameraDistance: cameraDistance,
@@ -217,6 +232,16 @@ struct WITPMapView: View {
                 .accessibilityLabel("Sosta in corso")
             }
             Spacer()
+            // Cerca una zona diversa da dove sei (richiesta degli utenti)
+            Button { showAddressSearch = true } label: {
+                Image(systemName: "magnifyingglass")
+                    .font(.system(size: 16, weight: .semibold))
+                    .frame(width: 42, height: 42)
+            }
+            .buttonStyle(.glass)
+            .clipShape(Circle())
+            .accessibilityLabel("Cerca un indirizzo")
+
             Button { showProfile = true } label: {
                 Image(systemName: "person.fill")
                     .font(.system(size: 16, weight: .semibold))
@@ -768,6 +793,7 @@ private struct SessionChip: View {
 private struct StallCanvas: View {
     let proxy: MapProxy
     let spots: [ParkingSpot]
+    let ztl: [ZTLZone]
     let revealAt: Date?
     let settled: Bool
     let cameraDistance: Double
@@ -801,6 +827,59 @@ private struct StallCanvas: View {
         // Dissolvenza legata allo zoom (3000 → 2500 m di distanza camera)
         let zoomAlpha = min(1, max(0, (3000 - cameraDistance) / 500))
         guard zoomAlpha > 0.02 else { return }
+
+        // ── ZTL: prima di tutto, sotto gli stalli. Rete diagonale dentro
+        //    il poligono: GIALLO = attiva adesso, BIANCO = non attiva.
+        for zone in ztl {
+            var path = Path()
+            var pts: [CGPoint] = []
+            for c in zone.polygon {
+                guard let pt = proxy.convert(c, to: .local) else { pts.removeAll(); break }
+                pts.append(pt)
+            }
+            guard pts.count >= 3 else { continue }
+            path.addLines(pts)
+            path.closeSubpath()
+
+            // Solo due stati arrivano qui: attiva (giallo) o in arrivo entro
+            // 30 min (ambra) — le zone spente non vengono più fetchate.
+            let active = zone.state.isActive
+            let base: Color = active ? .yellow : Color(red: 1.0, green: 0.62, blue: 0.0)
+            let lineA = zoomAlpha * (active ? 0.55 : 0.45)
+            let hatchA = zoomAlpha * (active ? 0.28 : 0.20)
+
+            ctx.stroke(path, with: .color(base.opacity(lineA)),
+                       style: StrokeStyle(lineWidth: 2.5, dash: [8, 6]))
+
+            let bb = path.boundingRect
+            guard bb.width > 4, bb.height > 4 else { continue }
+            ctx.drawLayer { layer in
+                layer.clip(to: path)
+                var hatch = Path()
+                let span = bb.width + bb.height
+                var t: CGFloat = -bb.height
+                while t < span {
+                    hatch.move(to: CGPoint(x: bb.minX + t, y: bb.minY))
+                    hatch.addLine(to: CGPoint(x: bb.minX + t + bb.height, y: bb.maxY))
+                    t += 14
+                }
+                layer.stroke(hatch, with: .color(base.opacity(hatchA)), lineWidth: 1.4)
+            }
+
+            let cxm = pts.reduce(0) { $0 + $1.x } / CGFloat(pts.count)
+            let cym = pts.reduce(0) { $0 + $1.y } / CGFloat(pts.count)
+            let stateLabel = zone.state.label(now: Date())
+            let label = Text("\(zone.name) · \(stateLabel)")
+                .font(.system(size: 11, weight: .bold))
+                .foregroundStyle(base)
+            let resolved = ctx.resolve(label)
+            let msize = resolved.measure(in: CGSize(width: 260, height: 40))
+            let chip = CGRect(x: cxm - msize.width/2 - 8, y: cym - msize.height/2 - 4,
+                              width: msize.width + 16, height: msize.height + 8)
+            ctx.fill(Path(roundedRect: chip, cornerRadius: 8),
+                     with: .color(Color.black.opacity(0.45 * zoomAlpha)))
+            ctx.draw(resolved, at: CGPoint(x: cxm, y: cym), anchor: .center)
+        }
 
         // LOD: da lontano campiona gli stalli (uno sì e uno no) — a quelle
         // distanze sono chiazze di colore, il dettaglio non serve.

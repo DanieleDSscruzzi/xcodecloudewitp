@@ -2,26 +2,61 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <!-- Scene: l'app normale (gestita da SwiftUI) più quella CarPlay.
+         La scena principale non va dichiarata: con il ciclo di vita
+         SwiftUI la fornisce il sistema. Qui si aggiunge SOLO CarPlay. -->
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <true/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <!-- Scena principale dell'app. Va dichiarata a mano perché la
+                 generazione automatica è disattivata: senza generazione,
+                 un manifest che contiene SOLO CarPlay lascerebbe l'app
+                 normale senza finestra. Il delegate è quello di SwiftUI
+                 (nessuna classe indicata = lo fornisce il sistema). -->
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                </dict>
+            </array>
+
+            <key>CPTemplateApplicationSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneClassName</key>
+                    <string>CPTemplateApplicationScene</string>
+                    <key>UISceneConfigurationName</key>
+                    <string>WITP-CarPlay</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>WITPCarPlaySceneDelegate</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
     <key>CFBundleDevelopmentRegion</key>
     <string>it</string>
 
     <key>CFBundleDisplayName</key>
-    <string>WITP</string>
+    <string>$(PRODUCT_NAME)</string>
 
     <key>CFBundleName</key>
     <string>WITP</string>
 
     <key>CFBundleIdentifier</key>
-    <string>com.danielescruzzi.witp</string>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 
+    <!-- Versione e build: governate da Xcode (General → Identity).
+         NON scriverle a mano qui, altrimenti il numero resta bloccato
+         e App Store Connect rifiuta la build. -->
     <key>CFBundleShortVersionString</key>
-    <string>1.0</string>
+    <string>$(MARKETING_VERSION)</string>
 
     <key>CFBundleVersion</key>
-    <string>1</string>
-
-    <key>MinimumOSVersion</key>
-    <string>17.0</string>
+    <string>$(CURRENT_PROJECT_VERSION)</string>
 
     <key>ITSAppUsesNonExemptEncryption</key>
     <false/>
@@ -42,6 +77,15 @@
         <string>location</string>
         <string>fetch</string>
         <string>processing</string>
+    </array>
+
+    <!-- Obbligatorio quando UIBackgroundModes contiene 'processing':
+         va dichiarato l'elenco degli identificatori dei task in background,
+         altrimenti App Store Connect rifiuta il binario (ITMS-90771). -->
+    <key>BGTaskSchedulerPermittedIdentifiers</key>
+    <array>
+        <string>com.danielescruzzi.witp.refresh</string>
+        <string>com.danielescruzzi.witp.processing</string>
     </array>
 
     <!-- Mappe -->

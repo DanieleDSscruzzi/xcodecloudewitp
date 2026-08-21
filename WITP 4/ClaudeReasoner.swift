@@ -59,7 +59,7 @@ final class ClaudeReasoner {
     /// `jws` è la ricevuta firmata dell'abbonamento (StoreKit 2).
     /// Ritorna nil in caso di qualunque problema: mai bloccante.
     func analyze(spots: [ParkingSpot], tier: SubscriptionTier, jws: String?,
-                 timeout: TimeInterval = 26) async -> ClaudeInsight? {
+                 ztl: [ZTLZone] = [], timeout: TimeInterval = 26) async -> ClaudeInsight? {
         // Solo abbonati veri: l'entitlement firmato di StoreKit è l'unica
         // credenziale accettata (Apple 3.1.1).
         guard tier != .free, !spots.isEmpty, jws?.isEmpty == false else { return nil }
@@ -82,10 +82,31 @@ final class ClaudeReasoner {
             ]
         }
 
+        // ZTL attive adesso: Claude deve saperlo per non mandare l'utente
+        // a parcheggiare dentro una zona a traffico limitato in vigore.
+        // Per ogni parcheggio si dice anche SE cade dentro una zona.
+        let ztlInfo: [[String: Any]] = ztl.map { z in
+            [
+                "nome": z.name,
+                "citta": z.city,
+                "stato": z.state.isActive ? "attiva adesso" : "si attiva a breve",
+                "quando": z.state.label()
+            ]
+        }
+        let itemsWithZTL: [[String: Any]] = zip(candidates, items).map { spot, item in
+            var m = item
+            if let zona = ztl.first(where: { $0.contains(spot.coordinate) }) {
+                m["dentro_ztl"] = zona.name
+                m["ztl_stato"] = zona.state.isActive ? "attiva adesso" : "si attiva a breve"
+            }
+            return m
+        }
+
         var body: [String: Any] = [
             "context": formatter.string(from: Date()),
-            "spots": items
+            "spots": itemsWithZTL
         ]
+        if !ztlInfo.isEmpty { body["ztl"] = ztlInfo }
         if let jws, !jws.isEmpty { body["jws"] = jws }
 
         guard let bodyData = try? JSONSerialization.data(withJSONObject: body) else { return nil }

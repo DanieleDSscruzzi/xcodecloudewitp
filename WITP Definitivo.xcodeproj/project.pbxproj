@@ -35,6 +35,9 @@
 		8D48C680FDBDB07FF02E49AB /* NeuralReasoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F0987A915BD457487476486 /* NeuralReasoner.swift */; };
 		972D08FFCE9166238C4969A9 /* witp-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A08422DA72CB22D80FF40BB /* witp-mark.png */; };
 		99501D19D9F44599B49597C7 /* SupportChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D6BAD8318F45F7A6631706 /* SupportChatView.swift */; };
+		FCD28FDC41D14949802B4407 /* ZTLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D33572BF844EF1B1017A67 /* ZTLService.swift */; };
+		F06FD9C87E664D9282EABD1F /* AddressSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA83E33C026A45078D49D011 /* AddressSearchView.swift */; };
+		7038D4A7EA8249B297AFACFA /* CarPlaySceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82C922A277548AABC5F1970 /* CarPlaySceneDelegate.swift */; };
 		9B94E025C9914E7C9083D137 /* ClaudeReasoner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600C941F6E75E48198D2724C /* ClaudeReasoner.swift */; };
 		B024B369FF16A000B202881E /* ParkingActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0352666B6D24AF9ED0ED374A /* ParkingActivityAttributes.swift */; };
 		C1FA489399AA472A9BCA4DE6 /* CloudParkingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE33BE00A6B41409586CAAC /* CloudParkingCache.swift */; };
@@ -69,6 +72,9 @@
 /* Begin PBXFileReference section */
 		0352666B6D24AF9ED0ED374A /* ParkingActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingActivityAttributes.swift; sourceTree = "<group>"; };
 		05D6BAD8318F45F7A6631706 /* SupportChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportChatView.swift; sourceTree = "<group>"; };
+		A0D33572BF844EF1B1017A67 /* ZTLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZTLService.swift; sourceTree = "<group>"; };
+		CA83E33C026A45078D49D011 /* AddressSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchView.swift; sourceTree = "<group>"; };
+		E82C922A277548AABC5F1970 /* CarPlaySceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlaySceneDelegate.swift; sourceTree = "<group>"; };
 		549CD26F06A5727745E77E3A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		600C941F6E75E48198D2724C /* ClaudeReasoner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeReasoner.swift; sourceTree = "<group>"; };
 		6A08422DA72CB22D80FF40BB /* witp-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "witp-mark.png"; sourceTree = "<group>"; };
@@ -171,6 +177,9 @@
 				87D1B5C82BEBEEA6B6D4415B /* LanguageStore.swift */,
 				EBE33BE00A6B41409586CAAC /* CloudParkingCache.swift */,
 				05D6BAD8318F45F7A6631706 /* SupportChatView.swift */,
+				A0D33572BF844EF1B1017A67 /* ZTLService.swift */,
+				CA83E33C026A45078D49D011 /* AddressSearchView.swift */,
+				E82C922A277548AABC5F1970 /* CarPlaySceneDelegate.swift */,
 				0352666B6D24AF9ED0ED374A /* ParkingActivityAttributes.swift */,
 				7EF942A14938800CBF5B33B8 /* WITPIntents.swift */,
 				6F0987A915BD457487476486 /* NeuralReasoner.swift */,
@@ -338,6 +347,9 @@
 				DD9149B393B69DE235212F24 /* LanguageStore.swift in Sources */,
 				C1FA489399AA472A9BCA4DE6 /* CloudParkingCache.swift in Sources */,
 				99501D19D9F44599B49597C7 /* SupportChatView.swift in Sources */,
+				FCD28FDC41D14949802B4407 /* ZTLService.swift in Sources */,
+				F06FD9C87E664D9282EABD1F /* AddressSearchView.swift in Sources */,
+				7038D4A7EA8249B297AFACFA /* CarPlaySceneDelegate.swift in Sources */,
 				898031D52FA667AB000DCE29 /* PaywallView.swift in Sources */,
 				898031D62FA667AB000DCE29 /* SessionStore.swift in Sources */,
 				898031D72FA667AB000DCE29 /* Models.swift in Sources */,
@@ -501,13 +513,13 @@
 				DEVELOPMENT_TEAM = S6C4FQLMT5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "WITP 4/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WITP;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WITP usa la tua posizione per trovare i parcheggi liberi intorno a te.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -516,10 +528,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielescruzzi.witp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -540,13 +556,13 @@
 				DEVELOPMENT_TEAM = S6C4FQLMT5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "WITP 4/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WITP;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WITP usa la tua posizione per trovare i parcheggi liberi intorno a te.";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -555,10 +571,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielescruzzi.witp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -587,7 +607,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielescruzzi.witp.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -620,7 +640,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielescruzzi.witp.widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

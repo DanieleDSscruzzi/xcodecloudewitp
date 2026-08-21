@@ -41,6 +41,8 @@ final class ParkingEngine: ObservableObject {
 
     @Published var scanCenter: CLLocationCoordinate2D?
     @Published var scanRadius: Double = 0
+    /// Zone a traffico limitato della zona scansionata (gialle = attive ora).
+    @Published var ztlZones: [ZTLZone] = []
 
     var isSearching: Bool { phase != .idle && phase != .done }
 
@@ -113,6 +115,15 @@ final class ParkingEngine: ObservableObject {
         var collected: [ParkingSpot] = []
         let radius = tier.searchRadius
 
+        // Le ZTL viaggiano in parallelo alle fonti parcheggio: non toccano
+        // il verdetto, riempiono solo il layer giallo/bianco della mappa.
+        Task { [weak self] in
+            let zones = await ZTLService.shared.zones(near: center,
+                                                      radius: max(radius, 1500))
+            guard let self, myScan == self.scanID else { return }
+            self.ztlZones = zones
+        }
+
         let sourcesWindow: TimeInterval = max(9, tier.answerBudget - 0.8)
         let progress = SpotProgressBox()
         let streamDone = StreamDoneFlag()
@@ -135,11 +146,17 @@ final class ParkingEngine: ObservableObject {
             ? max(2.0, tier.answerBudget - 0.8)
             : max(0.55, tier.answerBudget - 0.35)
 
-        // Istantanea al budget; se ancora vuota, una piccola grazia per il
-        // primo lotto (Apple arriva quasi sempre entro 1,5 s).
+        // Aspetta il budget INTERO: le fonti hanno tutto il tempo promesso
+        // per arrivare, e si esce prima solo se il flusso ha già finito.
+        //
+        // BUG STORICO (risolto qui): prima si usciva al PRIMO lotto non
+        // vuoto — di solito le sole pillole Apple a mezzo secondo. Il
+        // risultato è che la prima ricerca mostrava pochi parcheggi e
+        // bisognava rifarla per vederli tutti (la seconda volta rispondeva
+        // la cache, già completa).
         let budgetEnd = Date().addingTimeInterval(window)
         while Date() < budgetEnd {
-            if await !(progress.get()).isEmpty { break }
+            if await streamDone.isSet() { break }
             try? await Task.sleep(nanoseconds: 120_000_000)
         }
         if await (progress.get()).isEmpty {
@@ -169,7 +186,11 @@ final class ParkingEngine: ObservableObject {
             enriched.append(spot)
         }
         enriched = weightedSort(enriched)
-        spots = enriched   // la mappa può già rivelare
+        // Non sovrascrivere con meno di quello che la mappa mostra già:
+        // mentre questo flusso elaborava, i lotti in ritardo possono aver
+        // portato più parcheggi. Era la seconda metà del bug "devo cercare
+        // due volte".
+        applyIfRicher(enriched)
 
         // ── GARANZIA: un parcheggio si trova. Punto.
         // Se nel raggio non c'è nulla: 1) allargo la ricerca, 2) se ancora
@@ -235,9 +256,11 @@ final class ParkingEngine: ObservableObject {
                 case .turbo, .ultra:  fullTimeout = 12
                 case .ultraPlus:      fullTimeout = 10
                 }
+                let zonesNow = ztlZones
                 let claudeTask = Task {
                     await ClaudeReasoner.shared.analyze(spots: enriched, tier: tier,
-                                                        jws: jws, timeout: fullTimeout)
+                                                        jws: jws, ztl: zonesNow,
+                                                        timeout: fullTimeout)
                 }
 
                 let remaining = deadline.timeIntervalSinceNow
@@ -283,6 +306,20 @@ final class ParkingEngine: ObservableObject {
     /// si riempie ORA — strisce, poligoni, viali — senza buttare la
     /// risposta già data. Se Claude ha già parlato, i suoi aggiustamenti
     /// restano applicati.
+    /// La mappa non perde MAI contenuto: se quello che c'è già è più ricco
+    /// del candidato (più parcheggi, o più stalli disegnati), resta.
+    private func applyIfRicher(_ candidate: [ParkingSpot]) {
+        guard !candidate.isEmpty else { return }
+        if spots.isEmpty { spots = candidate; return }
+        let newDrawn = candidate.reduce(0) { $0 + ($1.stripes.isEmpty ? 0 : 1) }
+        let curDrawn = spots.reduce(0) { $0 + ($1.stripes.isEmpty ? 0 : 1) }
+        let newStripes = candidate.reduce(0) { $0 + $1.stripes.count }
+        let curStripes = spots.reduce(0) { $0 + $1.stripes.count }
+        if candidate.count > spots.count || newDrawn > curDrawn || newStripes > curStripes {
+            spots = candidate
+        }
+    }
+
     private func applyLateSpots(_ collected: [ParkingSpot], for scan: UUID,
                                 tier: SubscriptionTier) async {
         guard scan == scanID, !collected.isEmpty, !Task.isCancelled else { return }
@@ -330,7 +367,8 @@ final class ParkingEngine: ObservableObject {
         guard scan == scanID, !spots.isEmpty, !Task.isCancelled else { return }
         let timeout: TimeInterval = tier == .ultraPlus ? 10 : 12
         if let verdict = await ClaudeReasoner.shared.analyze(spots: spots, tier: tier,
-                                                             jws: jws, timeout: timeout) {
+                                                             jws: jws, ztl: ztlZones,
+                                                             timeout: timeout) {
             applyLateInsight(verdict, for: scan)
         }
     }
